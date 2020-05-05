@@ -22,5 +22,5 @@ namespace Gangwars
     }
     public class Gangwars
     {
-    }
+    } 
 }
