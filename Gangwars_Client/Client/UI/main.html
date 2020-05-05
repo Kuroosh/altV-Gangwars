@@ -1,0 +1,61 @@
+﻿<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        let taginfo = null;
+        function uhr() {
+            var jetzt = new Date();
+            var tag = jetzt.getDate();
+            var monat = jetzt.getMonth() + 1;
+            if (monat <= 9)
+                monat = '0' + monat;
+            var jahr = jetzt.getYear();
+            if (jahr < 999)
+                jahr += 1900;
+            var stunden = jetzt.getHours();
+            var minuten = jetzt.getMinutes();
+            var seconds = jetzt.getSeconds();
+            if (seconds >= 0 && seconds < 10) {
+                seconds = "0" + jetzt.getSeconds();
+            }
+            if (minuten >= 0 && minuten < 10) {
+                minuten = "0" + jetzt.getMinutes();
+            }
+            if (tag < 10) { tag = "0" + tag; }
+            var tag = tag + '.' + monat + '.' + jahr;
+            var zeit = stunden + ':' + minuten + ':' + seconds + ' Uhr';
+            $('.ui_header_clock').html(tag + " - " + zeit);
+            setTimeout(uhr, 500);
+        }
+    </script>
+</head>
+
+<body onload="uhr();">
+    <div id="teamselection" class="team d-none">
+        <div class="bg"></div>
+        <div class="team_1" onclick="alt.emit('selectedTeam', 1);">Grove Streets</div>
+        <div class="team_2" onclick="alt.emit('selectedTeam', 2);">Yakuza</div>
+        <div class="team_3" onclick="alt.emit('selectedTeam', 3);">Vagos</div>
+        <div class="team_4" onclick="alt.emit('selectedTeam', 4);">Ballas</div>
+    </div>
+    <div id="UI" class="d-none">
+        <div class="ui_header">
+            <div class="ui_header_info">alt:V Gangwars</div>
+            <div class="ui_header_clock">04.05.2020 - 14:48:54 Uhr</div>
+        </div>
+    </div>
+    <script>
+        if ("alt" in window) {
+            alt.on('TeamSelection:Show', () => {
+                $('#UI').addClass('d-none');
+                $('#teamselection').removeClass('d-none');
+            });
+            alt.on('TeamSelection:Hide', () => {
+                $('#teamselection').addClass('d-none');
+                $('#UI').removeClass('d-none');
+            });
+
+        }
+    </script>
+</body>
