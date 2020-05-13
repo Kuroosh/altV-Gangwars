@@ -10,6 +10,14 @@ namespace Gangwars.Core
 {
     public static class RageAPI
     {
+        public static void DrawNotification(this PlayerModel element, string errortype, string msg)
+        {
+            try
+            {
+                element.Emit("createVnXLiteNotify", errortype, msg);
+            }
+            catch (Exception ex) { Core.Debug.CatchExceptions("DrawNotification", ex); }
+        }
         public static void SpawnPlayer(this PlayerModel element, Vector3 pos, uint DelayInMS = 0)
         {
             try
@@ -26,7 +34,7 @@ namespace Gangwars.Core
                     element.position = pos;
                 }
             }
-            catch { }
+            catch (Exception ex) { Core.Debug.CatchExceptions("SpawnPlayer", ex); }
         }
         public static void DespawnPlayer(this PlayerModel element)
         {
@@ -121,25 +129,61 @@ namespace Gangwars.Core
         }
         public static string GetHexColorcode(int r, int g, int b)
         {
-            Color myColor = Color.FromArgb(r, g, b);
-            return "{" + myColor.R.ToString("X2") + myColor.G.ToString("X2") + myColor.B.ToString("X2") + "}";
+            try
+            {
+                Color myColor = Color.FromArgb(r, g, b);
+                return "{" + myColor.R.ToString("X2") + myColor.G.ToString("X2") + myColor.B.ToString("X2") + "}";
+            }
+            catch { return ""; }
         }
-        public static void WarpIntoVehicle<T>(this PlayerModel player, IVehicle veh, int seat)
+        public static void WarpIntoVehicle(this PlayerModel player, IVehicle veh, int seat)
         {
-            player.Emit("Player:WarpIntoVehicle", veh, seat);
+            try
+            {
+                player.Emit("Player:WarpIntoVehicle", veh, seat);
+            }
+            catch { }
         }
-        public static void WarpOutOfVehicle<T>(this PlayerModel player)
+        public static void WarpOutOfVehicle(this PlayerModel player)
         {
-            player.Emit("Player:WarpOutOfVehicle");
+            try
+            {
+                player.Emit("Player:WarpOutOfVehicle");
+            }
+            catch { }
+        }
+        public static void Freeze(this PlayerModel player, bool frozen)
+        {
+            try
+            {
+                player.Emit("Player:Freeze", frozen);
+            }
+            catch { }
+        }
+        public static void Team(this PlayerModel player, int TeamId)
+        {
+            try
+            {
+                Alt.Emit("GlobalSystems:PlayerTeam", player, TeamId);
+            }
+            catch { }
         }
         public static void SetVnXName(this PlayerModel player, string Name)
         {
-            player.vnxSetElementData(Globals.EntityData.PLAYER_NAME, Name);
-            player.SetStreamSyncedMetaData(Globals.EntityData.PLAYER_NAME, Name);
+            try
+            {
+                player.vnxSetElementData(Globals.EntityData.PLAYER_NAME, Name);
+                player.SetStreamSyncedMetaData(Globals.EntityData.PLAYER_NAME, Name);
+            }
+            catch { }
         }
         public static string GetVnXName(this PlayerModel player)
         {
-            return player.vnxGetElementData<string>(Globals.EntityData.PLAYER_NAME);
+            try
+            {
+                return player.vnxGetElementData<string>(Globals.EntityData.PLAYER_NAME);
+            }
+            catch { return "ERROR"; }
         }
         public static PlayerModel GetPlayerFromName(string name)
         {
@@ -163,7 +207,7 @@ namespace Gangwars.Core
             try
             {
                 Alt.Emit("GlobalSystems:GiveWeapon", player, (uint)weapon, ammo, false);
-                player.GiveWeapon(weapon, ammo, false);
+                //player.GiveWeapon(weapon, ammo, false);
             }
             catch { }
         }
@@ -184,14 +228,6 @@ namespace Gangwars.Core
             }
             catch { }
         }
-        public static void SetWeaponAmmo(this PlayerModel player, AltV.Net.Enums.WeaponModel weapon, int ammo)
-        {
-            try
-            {
-                player.SetWeaponAmmo(weapon, (byte)ammo);
-            }
-            catch { }
-        }
         public static void SendChatMessageToAll(string text)
         {
             try
@@ -206,14 +242,12 @@ namespace Gangwars.Core
         public static void SetClothes(this PlayerModel element, int clothesslot, int clothesdrawable, int clothestexture)
         {
             if (clothesslot < 0 || clothesdrawable < 0) { return; }
-            Core.Debug.OutputDebugString("Stuff : " + clothesslot + " | " + clothesdrawable + " | " + clothestexture);
             try { element.Emit("Clothes:Load", clothesslot, clothesdrawable, clothestexture); }
             catch (Exception ex) { Core.Debug.CatchExceptions("SetClothes", ex); }
         }
         public static void SetProp(this PlayerModel element, int propID, int drawableID, int textureID)
         {
             if (propID < 0 || textureID < 0) { return; }
-            Core.Debug.OutputDebugString("Stuff : " + propID + " | " + drawableID + " | " + textureID);
             try { element.Emit("Prop:Load", propID, drawableID, textureID); }
             catch (Exception ex) { Core.Debug.CatchExceptions("SetProp", ex); }
         }
@@ -234,11 +268,19 @@ namespace Gangwars.Core
         }
         public static float ToRadians(float val)
         {
-            return (float)(System.Math.PI / 180) * val;
+            try
+            {
+                return (float)(System.Math.PI / 180) * val;
+            }
+            catch { return 0; }
         }
         public static float ToDegrees(float val)
         {
-            return (float)(val * (180 / System.Math.PI));
+            try
+            {
+                return (float)(val * (180 / System.Math.PI));
+            }
+            catch { return 0; }
         }
     }
 }

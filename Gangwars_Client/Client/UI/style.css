@@ -2,7 +2,7 @@ body{
     -ms-user-select: None; 
     -moz-user-select: None; 
     -webkit-user-select: None; 
-    font-family:sans-serif;
+    font-family: sans-serif;
     overflow: hidden;
 }
 
@@ -20,82 +20,192 @@ body{
 
 .team_1{
 	position: absolute;
-	left: 15vw;
+	left: 25%;
 	width: 14vw;
-	top: 17vw;
+	top: 25%;
 	font-size: 1.5vw;
 	padding: 2vw 0.8vw;
 	text-align: center;
 	color: white;
-	background-color:rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.8);
+    transform: translate(-50%);
 }
 .team_1:hover{
 	position: absolute;
 	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: green;
-	-webkit-box-shadow:inset 0px 0px 0px 2px rgb(0,200,0);
-	-moz-box-shadow:inset 0px 0px 0px 2px rgb(0,200,0);
-	box-shadow:inset 0px 0px 0px 2px rgb(0,200,0);
+	-webkit-text-stroke-color: rgb(0,140,183);
+	-webkit-box-shadow: inset 0px 0px 0px 3px rgb(0,140,183);
+	-moz-box-shadow: inset 0px 0px 0px 3px rgb(0,140,183);
+	box-shadow: inset 0px 0px 0px 3px rgb(0,140,183);
 }
 
 .team_2{
 	position: absolute;
-	left: 35vw;
+	left: 50%;
 	width: 14vw;
-	top: 17vw;
+	top: 25%;
 	font-size: 1.5vw;
 	padding: 2vw 0.8vw;
 	text-align: center;
 	color: white;
-	background-color:rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.8);
+    transform: translate(-50%);
 }
 .team_2:hover{
 	position: absolute;
 	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: red;
-	-webkit-box-shadow:inset 0px 0px 0px 2px rgb(200,0,0);
-	-moz-box-shadow:inset 0px 0px 0px 2px rgb(200,0,0);
-	box-shadow:inset 0px 0px 0px 2px rgb(200,0,0);
+	-webkit-text-stroke-color: rgb(120,120,120);
+	-webkit-box-shadow: inset 0px 0px 0px 3px rgb(120,120,120);
+	-moz-box-shadow: inset 0px 0px 0px 3px rgb(120,120,120);
+	box-shadow: inset 0px 0px 0px 3px rgb(120,120,120);
 }
 .team_3{
 	position: absolute;
-	left: 55vw;
+	left: 75%;
 	width: 14vw;
-	top: 17vw;
+	top: 25%;
 	font-size: 1.5vw;
 	padding: 2vw 0.8vw;
 	text-align: center;
 	color: white;
-	background-color:rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.8);
+    transform: translate(-50%);
 }
 .team_3:hover{
 	position: absolute;
 	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: rgb(0,150,200);
-	-webkit-box-shadow:inset 0px 0px 0px 2px rgb(0,150,200);
-	-moz-box-shadow:inset 0px 0px 0px 2px rgb(0,150,200);
-	box-shadow:inset 0px 0px 0px 2px rgb(0,150,200);
+	-webkit-text-stroke-color: rgb(255,4,4);
+	-webkit-box-shadow: inset 0px 0px 0px 3px rgb(255,4,4);
+	-moz-box-shadow: inset 0px 0px 0px 3px rgb(255,4,4);
+	box-shadow: inset 0px 0px 0px 3px rgb(255,4,4);
 }
 
-.team_4{
+.team_6{
 	position: absolute;
-	left: 75vw;
+	left: 25%;
 	width: 14vw;
-	top: 17vw;
+	top: 50%;
 	font-size: 1.5vw;
 	padding: 2vw 0.8vw;
 	text-align: center;
 	color: white;
-	background-color:rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.8);
+    transform: translate(-50%);
 }
-.team_4:hover{
+.team_6:hover{
 	position: absolute;
 	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: rgb(200,0,200);
-	-webkit-box-shadow:inset 0px 0px 0px 2px rgb(200,0,200);
-	-moz-box-shadow:inset 0px 0px 0px 2px rgb(200,0,200);
-	box-shadow:inset 0px 0px 0px 2px rgb(200,0,200);
+	-webkit-text-stroke-color: rgb(0,86,184);
+	-webkit-box-shadow: inset 0px 0px 0px 3px rgb(0,86,184);
+	-moz-box-shadow: inset 0px 0px 0px 3px rgb(0,86,184);
+	box-shadow: inset 0px 0px 0px 3px rgb(0,86,184);
 }
+
+.team_7{
+	position: absolute;
+	left: 50%;
+	width: 14vw;
+	top: 50%;
+	font-size: 1.5vw;
+	padding: 2vw 0.8vw;
+	text-align: center;
+	color: white;
+	background-color: rgba(0,0,0,0.8);
+    transform: translate(-50%);
+}
+.team_7:hover{
+	position: absolute;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: rgb(200,200,0);
+	-webkit-box-shadow: inset 0px 0px 0px 3px rgb(200,200,0);
+	-moz-box-shadow: inset 0px 0px 0px 3px rgb(200,200,0);
+	box-shadow: inset 0px 0px 0px 3px rgb(200,200,0);
+}
+
+.team_8{
+	position: absolute;
+	left: 75%;
+	width: 14vw;
+	top: 50%;
+	font-size: 1.5vw;
+	padding: 2vw 0.8vw;
+	text-align: center;
+	color: white;
+	background-color: rgba(0,0,0,0.8);
+    transform: translate(-50%);
+}
+.team_8:hover{
+	position: absolute;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: rgb(0,100,0);
+	-webkit-box-shadow: inset 0px 0px 0px 3px rgb(0,100,0);
+	-moz-box-shadow: inset 0px 0px 0px 3px rgb(0,100,0);
+	box-shadow: inset 0px 0px 0px 3px rgb(0,100,0);
+}
+
+.team_9{
+	position: absolute;
+	left: 25%;
+	width: 14vw;
+	top: 75%;
+	font-size: 1.5vw;
+	padding: 2vw 0.8vw;
+	text-align: center;
+	color: white;
+	background-color: rgba(0,0,0,0.8);
+    transform: translate(-50%);
+}
+.team_9:hover{
+	position: absolute;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: rgb(100,50,50);
+	-webkit-box-shadow: inset 0px 0px 0px 3px rgb(100,50,50);
+	-moz-box-shadow: inset 0px 0px 0px 3px rgb(100,50,50);
+	box-shadow: inset 0px 0px 0px 3px rgb(100,50,50);
+}
+
+.team_12{
+	position: absolute;
+	left: 50%;
+	width: 14vw;
+	top: 75%;
+	font-size: 1.5vw;
+	padding: 2vw 0.8vw;
+	text-align: center;
+	color: white;
+	background-color: rgba(0,0,0,0.8);
+    transform: translate(-50%);
+}
+.team_12:hover{
+	position: absolute;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: rgb(138,43,226);
+	-webkit-box-shadow: inset 0px 0px 0px 3px rgb(138,43,226);
+	-moz-box-shadow: inset 0px 0px 0px 3px rgb(138,43,226);
+	box-shadow: inset 0px 0px 0px 3px rgb(138,43,226);
+}
+
+.team_13{
+	position: absolute;
+	left: 75%;
+	width: 14vw;
+	top: 75%;
+	font-size: 1.5vw;
+	padding: 2vw 0.8vw;
+	text-align: center;
+	color: white;
+	background-color: rgba(0,0,0,0.8);
+    transform: translate(-50%);
+}
+.team_13:hover{
+	position: absolute;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: rgb(0,152,0);
+	-webkit-box-shadow: inset 0px 0px 0px 3px rgb(0,152,0);
+	-moz-box-shadow: inset 0px 0px 0px 3px rgb(0,152,0);
+	box-shadow: inset 0px 0px 0px 3px rgb(0,152,0);
+}
+
 /* //////////////////////////////////////////////////////////////////////////*/
 
 .ui_header{	
@@ -108,15 +218,15 @@ body{
 	background-color: rgba(0,0,0,0.7);
     border-bottom-left-radius: 0.3vw;
     border-bottom-right-radius: 0.3vw;
-    border-bottom: solid 0.1vw rgb(0,150,0);
-    border-left: solid 0.1vw rgb(0,150,0);
-    border-right: solid 0.1vw rgb(0,150,0);
+    border-bottom: solid 0.1vw rgb(0,200,255);
+    border-left: solid 0.1vw rgb(0,200,255);
+    border-right: solid 0.1vw rgb(0,200,255);
     transform: translate(-50%);
 }
 
 .ui_header_info{	
 	position: absolute;
-    color: rgb(0,200,0);
+    color: rgb(0,150,200);
     left: 50%;
     transform: translate(-50%);
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;

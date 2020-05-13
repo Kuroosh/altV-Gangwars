@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AltV.Net;
+using AltV.Net.Resources.Chat.Api;
+using Gangwars.Model;
+using System;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -48,6 +51,17 @@ namespace Gangwars.Core
             Console.WriteLine();
         }
 
+        public static void SendChatMessageToAll(string msg)
+        {
+            try
+            {
+                foreach (PlayerModel players in Alt.GetAllPlayers())
+                {
+                    players.SendChatMessage(msg);
+                }
+            }
+            catch { }
+        }
         public static string Sha256(string randomString)
         {
             using SHA256 sha256Hash = SHA256.Create();

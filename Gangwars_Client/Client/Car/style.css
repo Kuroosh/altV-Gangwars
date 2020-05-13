@@ -1,0 +1,117 @@
+body {
+    -ms-user-select: None; 
+    -moz-user-select: None; 
+    -webkit-user-select: None; 
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {display: none;
+    display: none;
+}
+
+.back {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 30%;
+	height: 74.9%;
+	background: rgba(0,0,0,0.8);
+	background-repeat: no-repeat;
+	background-size: cover;
+    transform: translate(-50%,-50%);
+    border-top: solid 3px rgba(0,200,255,0.8);
+    border-radius: 0.4vw;
+}
+
+.header {
+    position: absolute;
+    left: 50%;
+    top: 15.7%;
+    width: 30%;
+    background: rgba(0,0,0,0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translate(-50%,-50%);
+    color: rgb(240,240,240);
+    border-radius: 0.4vw;
+    text-align: center;
+    padding-top: 0.6vw;
+    padding-bottom: 0.6vw;
+    font-size: 1.5vw;
+}
+
+.line {
+    position: absolute;
+    background: rgba(200,200,200,0.6);
+    width: 0.2vw;
+    height: 69%;
+    left: 56%;
+    top: 53%;
+    transform: translate(-50%,-50%);
+}
+
+.car {
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top: 53%;
+    width: 30%;
+    left: 50%;
+    height: 69%;
+    transform: translate(-50%,-50%);
+}
+
+.tg {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+    color: rgb(240,240,240);
+    border-collapse: collapse;
+    border-spacing: 0vw;
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+.tg tr:hover {
+    background: rgba(0, 200, 255, 0.8);
+    cursor: pointer;
+	color:white;
+    font-weight: bold;
+}
+
+.tg td {
+    border-color: rgba(255, 255, 255, 0);
+    padding: 0.2vw 0vw;
+    border-width: 0.1vw;
+    border-style: solid;
+}
+
+.tg .tg-m5ue {
+    background-color:rgba(150, 150, 150, 0.4);
+}
+
+.d-none{
+	display: none;
+}
+
+.close {
+	position: fixed;
+    height: auto;
+	color: gray;
+	cursor: pointer;
+	transition: all ease 0ss;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 1.4vw;
+    top: 16%;
+    left: 63.6%;
+    transform: translate(-50%,-50%);
+}
+.close:hover, .close:active {
+    position: fixed;
+	outline: none;
+	color: darkred;
+    font-weight: bold;
+}

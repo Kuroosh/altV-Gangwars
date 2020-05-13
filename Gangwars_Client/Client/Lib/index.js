@@ -70,9 +70,9 @@ export function Draw3DText(msg, x, y, z, fontType, color, range = 20, useOutline
 
         if (dist > range) return;
 
-        let scale = (4.00001 / dist) * 0.4
-        if (scale > 0.6)
-            scale = 0.6;
+        let scale = (2.00001 / dist) * 0.4
+        if (scale > 0.3)
+            scale = 0.3;
 
 
         const fov = (1 / game.getGameplayCamFov()) * 100;
@@ -97,6 +97,7 @@ export function Draw3DText(msg, x, y, z, fontType, color, range = 20, useOutline
     }
     catch{ }
 }
+
 
 
 

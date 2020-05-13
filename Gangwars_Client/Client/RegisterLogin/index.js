@@ -7,6 +7,7 @@
 import * as alt from 'alt-client';
 import * as game from "natives";
 import { ShowCursor } from '../Lib';
+import { CreateScoreboard } from '../scoreboard';
 
 let LoginRegisterBrowser;
 
@@ -27,5 +28,6 @@ alt.onServer('LoginRegister:Destroy', () => {
         LoginRegisterBrowser.destroy();
         LoginRegisterBrowser = null;
         ShowCursor(false);
+        CreateScoreboard();
     }
 });

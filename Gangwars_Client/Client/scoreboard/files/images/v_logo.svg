@@ -1,0 +1,33 @@
+<svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="999.969" height="999.969" viewBox="0 0 999.969 999.969">
+          <defs>
+    <style>
+      .cls-1 {
+        fill: #4e753e;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 5px;
+        opacity: 0.1;
+      }
+
+      .cls-3 {
+        fill: #7a9c59;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="281.781" y="310.875" width="436.469" height="378.875" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path class="cls-1" d="M78.737,0.991l756.3,110.421c43.365,6.331,82.164,47.29,86.9,91.49l77.581,724.3c4.668,43.612-26,76.077-68.737,72.515L185.734,937.684C138,933.71,94.749,892.8,89.4,846.29L0.559,73.586C-4.865,26.413,30.264-6.086,78.737.991Z" transform="translate(0 -0.031)"/>
+  <path class="cls-2" d="M108.225,35.923L811.579,138.614c40.33,5.888,76.413,43.98,80.816,85.086l72.151,673.6c4.344,40.559-24.179,70.748-63.926,67.439L207.731,907.047c-44.39-3.7-84.615-41.746-89.588-85L35.518,103.436C30.474,59.565,63.144,29.341,108.225,35.923Z" transform="translate(0 -0.031)"/>
+  <path class="cls-3" d="M281.766,310.868l218.24,378.889,218.24-378.889h-290.8l72.557,126.549,36.373-62.643h72.368L500.006,562.955,354.7,310.868H281.766Z" transform="translate(0 -0.031)"/>
+</svg>

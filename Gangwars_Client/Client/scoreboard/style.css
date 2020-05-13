@@ -1,0 +1,220 @@
+/*//----------------------------------//
+///// VenoX Gaming & Fun 2019 © ///////
+//////By LargePeach & VnX RL Crew////
+////////www.venox-reallife.com////////
+//----------------------------------//*/
+
+@font-face { font-family: 'drugs';
+             src: url('./files/fonts/Caviar-Dreams.ttf') format('truetype'); }
+@font-face { font-family: 'robot';
+             src: url('./files/fonts/Roboto-Thin.ttf') format('truetype'); }
+
+.all {
+    -ms-user-select: none; 
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    height: 100%;
+    width: 100%;
+}
+
+* {
+	user-select: none;
+    list-style: none;
+}
+
+.Scoreboard_Main{
+    position: absolute;
+    left: 50%;
+    height: 22vw;
+    top: 50%;
+    width: 40vw;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.6);
+    border-top: 0.2vw solid rgb(0,150,200);
+}
+
+.Scoreboard_Header{
+    position: absolute;
+    color: white;
+    text-align: center;
+    padding: 0.2vw 0vw;
+    width: 100%;
+    font-family: arial;
+    font-size: 1.5vw;
+    background: rgba(0,0,0,0.4);
+}
+
+#scoreboardplayer {
+    position: absolute;
+    color: white;
+    left: 0vw;
+    font-size: 1vw;
+    width: 13vw;
+    text-align: center;
+    line-height: 1.99vw;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    padding: inherit;
+	font-family: arial;
+}
+
+#scoreboardspielzeit {
+    position: absolute;
+    color: white;
+    left: 13vw;
+    font-size: 1vw;
+    width: 7vw;
+    text-align: center;
+    line-height: 1.99vw;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    padding: inherit;
+	font-family: arial;
+}
+
+#scoreboardkills {
+    position: absolute;
+    color: white;
+    left: 20vw;
+    font-size: 1vw;
+    width: 5vw;
+    text-align: center;
+    line-height: 1.99vw;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    padding: inherit;
+	font-family: arial;
+}
+
+#scoreboardtode {
+    position: absolute;
+    color: white;
+    left: 25vw; 
+    font-size: 1vw;
+    width: 5vw;
+    text-align: center;
+    line-height: 1.99vw;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    padding: inherit;
+	font-family: arial;
+}
+
+#scoreboardstreaks {
+    position: absolute;
+    color: white;
+    left: 30vw;
+    font-size: 1vw;
+    width: 5vw;
+    text-align: center;
+    line-height: 1.99vw;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    padding: inherit;
+	font-family: arial;
+}
+
+#scoreboardping {
+    position: absolute;
+    color: white;
+    left: 35vw;
+    font-size: 1vw;
+	width: 5vw;
+    text-align: center;
+    line-height: 1.99vw;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    padding: inherit;
+	font-family: arial;
+}
+
+/*-------------------------------------------*/
+
+.Scoreboard_Header_info_Name{
+    position: absolute;
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    font-size: 1.2vw;
+    padding: 0.2vw 0vw;
+    width: 13vw;
+    top: 2.1vw;
+    left: 0vw;
+}
+
+.Scoreboard_Header_info_Playtime{
+    position: absolute;
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    font-size: 1.2vw;
+    padding: 0.2vw 0vw;
+    width: 7vw;
+    top: 2.1vw;
+    left: 13vw;
+}
+.Scoreboard_Header_info_Kills{
+    position: absolute;
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    font-size: 1.2vw;
+    padding: 0.2vw 0vw;
+    width: 5vw;
+    top: 2.1vw;
+    left: 20vw;
+}
+.Scoreboard_Header_info_Tode{
+    position: absolute;
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    font-size: 1.2vw;
+    padding: 0.2vw 0vw;
+    width: 5vw;
+    top: 2.1vw;
+    left: 25vw;
+}
+.Scoreboard_Header_info_Streaks{
+    position: absolute;
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    font-size: 1.2vw;
+    padding: 0.2vw 0vw;
+    width: 5vw;
+    top: 2.1vw;
+    left: 30vw;
+}
+.Scoreboard_Header_info_Ping{
+    position: absolute;
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    font-size: 1.2vw;
+    padding: 0.2vw 0vw;
+    width: 5vw;
+    top: 2.1vw;
+    left: 35vw;
+}
+
+/*-------------------------------------------*/
+
+.scoreboard {
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top: 3.9vw;
+    left: 0vw;
+    width: 100%;
+    height: 82%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.d-none {
+    display: none !important
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

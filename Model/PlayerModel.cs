@@ -7,18 +7,21 @@ namespace Gangwars.Model
 {
     public class PlayerModel : Player
     {
+        public int _UID { get; set; }
         public string _Name { get; set; }
         public int _Playtime { get; set; }
+        public bool _LoggedIn { get; set; }
         public int _Kills { get; set; }
         public int _Deaths { get; set; }
         public int _MaxStreaks { get; set; }
         public int _Cstreak { get; set; }
+        public int _Level { get; set; }
+        public int _EXP { get; set; }
         public int _Alevel { get; set; }
-        private Vector3 Pos { get; set; }
         public Vector3 position
         {
-            get { return Pos; }
-            set { Pos = value; Alt.Emit("GlobalSystems:PlayerPosition", this, value); Core.Debug.OutputDebugString("Called Pos " + value); }
+            get { return Position; }
+            set { Alt.Emit("GlobalSystems:PlayerPosition", this, value); }
         }
         public PlayerModel(IntPtr nativePointer, ushort id) : base(nativePointer, id)
         {
@@ -31,7 +34,10 @@ namespace Gangwars.Model
                 _MaxStreaks = 0;
                 _Cstreak = 0;
                 _Alevel = 0;
-                position = new Vector3(0, 0, 500);
+                _Level = 1;
+                _EXP = 0;
+                _LoggedIn = false;
+                position = new Vector3(0, 0, 0);
             }
             catch (Exception ex) { Core.Debug.CatchExceptions("PlayerModel-Create", ex); }
         }
