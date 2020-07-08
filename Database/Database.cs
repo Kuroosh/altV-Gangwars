@@ -15,9 +15,9 @@ namespace Gangwars.Database
         public static async void OnResourceStart()
         {
             string host = "127.0.0.1";
-            string user = "Gangwars";
-            string pass = "0M1ae!0u!a71s3vUl9M6nm%3";
-            string db = "Gangwars";
+            string user = "";
+            string pass = "";
+            string db = "";
             connectionString = "SERVER=" + host + "; DATABASE=" + db + "; UID=" + user + "; PASSWORD=" + pass + "; SSLMODE=none;";
 
             await Task.Run(async () =>
