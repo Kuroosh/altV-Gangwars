@@ -18,7 +18,7 @@ namespace Gangwars.Database
             string user = "";
             string pass = "";
             string db = "";
-            connectionString = "SERVER=" + host + "; DATABASE=" + db + "; UID=" + user + "; PASSWORD=" + pass + "; SSLMODE=none;";
+            connectionString = "SERVER=" + host + "; DATABASE=" + db + "; UID=" + user + "; PASSWORD=" + pass + "; SSLMODE=none;"; 
 
             await Task.Run(async () =>
             {
