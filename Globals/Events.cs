@@ -23,7 +23,7 @@ namespace Gangwars.Globals
             {
                 source?.Emit("Globals:ShowBloodScreen");
             }
-            catch { }
+            catch (Exception ex) { Core.Debug.CatchExceptions("PlayerDamage", ex); }
         }
         [ScriptEvent(ScriptEventType.PlayerDisconnect)]
         public void OnPlayerDisconnect(PlayerModel client, string reason)

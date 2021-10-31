@@ -23,7 +23,8 @@ namespace Gangwars.Model
             get { return Position; }
             set { Alt.Emit("GlobalSystems:PlayerPosition", this, value); }
         }
-        public PlayerModel(IntPtr nativePointer, ushort id) : base(nativePointer, id)
+
+        public PlayerModel(IServer server, IntPtr nativePointer, ushort id) : base(server, nativePointer, id)
         {
             try
             {
@@ -44,11 +45,11 @@ namespace Gangwars.Model
     }
     public class MyPlayerFactory : IEntityFactory<IPlayer>
     {
-        public IPlayer Create(IntPtr playerPointer, ushort id)
+        public IPlayer Create(IServer server, IntPtr entityPointer, ushort id)
         {
             try
             {
-                return new PlayerModel(playerPointer, id);
+                return new PlayerModel(server, entityPointer, id);
             }
             catch (Exception ex) { Core.Debug.CatchExceptions("PlayerFactory:Create", ex); return null; }
         }

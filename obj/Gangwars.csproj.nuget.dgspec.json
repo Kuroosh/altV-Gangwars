@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Solid_Snake\\Documents\\[VenoX-Scripting-Service]\\altV-Gangwars\\Gangwars.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Solid_Snake\\Documents\\[VenoX-Scripting-Service]\\altV-Gangwars\\Gangwars.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Solid_Snake\\Documents\\[VenoX-Scripting-Service]\\altV-Gangwars\\Gangwars.csproj",
+        "projectName": "Gangwars",
+        "projectPath": "C:\\Users\\Solid_Snake\\Documents\\[VenoX-Scripting-Service]\\altV-Gangwars\\Gangwars.csproj",
+        "packagesPath": "C:\\Users\\Solid_Snake\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Solid_Snake\\Documents\\[VenoX-Scripting-Service]\\altV-Gangwars\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Solid_Snake\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AltV.Net": {
+              "target": "Package",
+              "version": "[6.1.20, )"
+            },
+            "AltV.Net.Async": {
+              "target": "Package",
+              "version": "[6.1.20, )"
+            },
+            "AltV.Net.Resources.Chat.Api": {
+              "target": "Package",
+              "version": "[1.48.0, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.27, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
