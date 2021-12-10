@@ -30,7 +30,7 @@ alt.everyTick(() => {
         let labels = TextLabels[clabel];
         Draw3DText(labels.msg, labels.x, labels.y, labels.z, labels.font, [labels.r, labels.g, labels.b, 255], labels.range);
     }
-    game.setEntityProofs(alt.Player.local.scriptID, true, false, false, true, false);
+    game.setEntityProofs(alt.Player.local.scriptID, true, false, false, true, false, true, true, true);
 });
 
 
