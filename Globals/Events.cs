@@ -17,7 +17,7 @@ namespace Gangwars.Globals
         }
 
         [ScriptEvent(ScriptEventType.PlayerDamage)]
-        public static void PlayerDamage(PlayerModel source, IEntity entity, uint weapon, ushort damage)
+        public static void PlayerDamage(PlayerModel source, IEntity entity, uint weapon, ushort healthDamage, ushort armourDamage)
         {
             try
             {
