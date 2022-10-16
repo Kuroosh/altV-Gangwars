@@ -16,7 +16,7 @@ namespace Gangwars.Core
             {
                 element.Emit("createVnXLiteNotify", errortype, msg);
             }
-            catch (Exception ex) { Core.Debug.CatchExceptions("DrawNotification", ex); }
+            catch (Exception ex) { Debug.CatchExceptions("DrawNotification", ex); }
         }
         public static void SpawnPlayer(this PlayerModel element, Vector3 pos, uint DelayInMS = 0)
         {
@@ -34,7 +34,7 @@ namespace Gangwars.Core
                     element.position = pos;
                 }
             }
-            catch (Exception ex) { Core.Debug.CatchExceptions("SpawnPlayer", ex); }
+            catch (Exception ex) { Debug.CatchExceptions("SpawnPlayer", ex); }
         }
         public static void DespawnPlayer(this PlayerModel element)
         {
@@ -87,7 +87,7 @@ namespace Gangwars.Core
         public static void vnxSetElementData(this IBaseObject element, string key, object value)
         {
             try { element.SetData(key, value); }
-            catch (Exception ex) { Core.Debug.CatchExceptions("vnxSetElementData", ex); }
+            catch (Exception ex) { Debug.CatchExceptions("vnxSetElementData", ex); }
         }
         public static void vnxSetSharedElementData<T>(this IEntity element, string key, T value)
         {
@@ -96,7 +96,7 @@ namespace Gangwars.Core
                 element.SetData(key, value);
                 element.SetSyncedMetaData(key, value);
             }
-            catch (Exception ex) { Core.Debug.CatchExceptions("vnxSetSharedElementData", ex); }
+            catch (Exception ex) { Debug.CatchExceptions("vnxSetSharedElementData", ex); }
         }
         public static void vnxSetStreamSharedElementData<T>(this IEntity element, string key, T value)
         {
@@ -105,7 +105,7 @@ namespace Gangwars.Core
                 element.SetData(key, value);
                 element.SetStreamSyncedMetaData(key, value);
             }
-            catch (Exception ex) { Core.Debug.CatchExceptions("vnxSetStreamSharedElementData", ex); }
+            catch (Exception ex) { Debug.CatchExceptions("vnxSetStreamSharedElementData", ex); }
         }
         public static void Repair(this IVehicle element)
         {
@@ -113,7 +113,7 @@ namespace Gangwars.Core
             {
                 foreach (PlayerModel player in Alt.GetAllPlayers()) { player.Emit("Vehicle:Repair", element); }
             }
-            catch (Exception ex) { Core.Debug.CatchExceptions("Repair", ex); }
+            catch (Exception ex) { Debug.CatchExceptions("Repair", ex); }
         }
         public static T vnxGetSharedData<T>(this IEntity element, string key)
         {
@@ -239,17 +239,17 @@ namespace Gangwars.Core
             }
             catch { }
         }
-        public static void SetClothes(this PlayerModel element, int clothesslot, int clothesdrawable, int clothestexture)
+        public static void SetClothes(this PlayerModel element, int clothesslot, int clothesdrawable, int clothestexture, int clothespalette)
         {
             if (clothesslot < 0 || clothesdrawable < 0) { return; }
-            try { element.Emit("Clothes:Load", clothesslot, clothesdrawable, clothestexture); }
-            catch (Exception ex) { Core.Debug.CatchExceptions("SetClothes", ex); }
+            try { element.Emit("Clothes:Load", clothesslot, clothesdrawable, clothestexture, clothespalette); }
+            catch (Exception ex) { Debug.CatchExceptions("SetClothes", ex); }
         }
         public static void SetProp(this PlayerModel element, int propID, int drawableID, int textureID)
         {
             if (propID < 0 || textureID < 0) { return; }
             try { element.Emit("Prop:Load", propID, drawableID, textureID); }
-            catch (Exception ex) { Core.Debug.CatchExceptions("SetProp", ex); }
+            catch (Exception ex) { Debug.CatchExceptions("SetProp", ex); }
         }
         public static void SetAccessories(IPlayer element, int clothesslot, int clothesdrawable, int clothestexture)
         {
@@ -270,7 +270,7 @@ namespace Gangwars.Core
         {
             try
             {
-                return (float)(System.Math.PI / 180) * val;
+                return (float)(Math.PI / 180) * val;
             }
             catch { return 0; }
         }
@@ -278,7 +278,7 @@ namespace Gangwars.Core
         {
             try
             {
-                return (float)(val * (180 / System.Math.PI));
+                return (float)(val * (180 / Math.PI));
             }
             catch { return 0; }
         }

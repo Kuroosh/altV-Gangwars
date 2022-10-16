@@ -15,9 +15,9 @@ namespace Gangwars.Database
         public static async void OnResourceStart()
         {
             string host = "127.0.0.1";
-            string user = "";
-            string pass = "";
-            string db = "";
+            string user = "root";
+            string pass = "t00r";
+            string db = "altv_gangwar_test";
             connectionString = "SERVER=" + host + "; DATABASE=" + db + "; UID=" + user + "; PASSWORD=" + pass + "; SSLMODE=none;"; 
 
             await Task.Run(async () =>
@@ -28,7 +28,7 @@ namespace Gangwars.Database
                     Globals.Main.BannedAccounts = LoadBannedAccountlist();
                 });
             });
-            Core.Debug.OutputLog("--- Database Connection = [OK!]", ConsoleColor.Green);
+            Debug.OutputLog("--- Database Connection = [OK!]", ConsoleColor.Green);
         }
 
 
@@ -51,7 +51,7 @@ namespace Gangwars.Database
                 }
                 return RegisterList;
             }
-            catch (Exception ex) { Core.Debug.CatchExceptions("LoadRegisteredAccountlist", ex); return new List<RegisterModel>(); }
+            catch (Exception ex) { Debug.CatchExceptions("LoadRegisteredAccountlist", ex); return new List<RegisterModel>(); }
         }
         private static List<Banmodel> LoadBannedAccountlist()
         {
@@ -70,7 +70,7 @@ namespace Gangwars.Database
                 }
                 return BanList;
             }
-            catch (Exception ex) { Core.Debug.CatchExceptions("LoadRegisteredAccountlist", ex); return new List<Banmodel>(); }
+            catch (Exception ex) { Debug.CatchExceptions("LoadRegisteredAccountlist", ex); return new List<Banmodel>(); }
         }
 
         public static void ChangeUserPasswort(string Name, string Password)
@@ -190,7 +190,7 @@ namespace Gangwars.Database
                 command.Parameters.AddWithValue("@Password", password);
                 command.ExecuteNonQuery();
             }
-            catch (Exception ex) { Core.Debug.CatchExceptions("RegisterAccount", ex); }
+            catch (Exception ex) { Debug.CatchExceptions("RegisterAccount", ex); }
             try
             {
                 using MySqlConnection connection = new MySqlConnection(connectionString);
@@ -200,7 +200,7 @@ namespace Gangwars.Database
                 command.Parameters.AddWithValue("@Name", username);
                 command.ExecuteNonQuery();
             }
-            catch (Exception ex) { Core.Debug.CatchExceptions("RegisterAccountSecondStep", ex); }
+            catch (Exception ex) { Debug.CatchExceptions("RegisterAccountSecondStep", ex); }
         }
     }
 }

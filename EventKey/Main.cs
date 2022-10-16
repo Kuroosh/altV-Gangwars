@@ -10,7 +10,7 @@ namespace Gangwars.EventKey
     {
         private static VehicleModel GetNearestVehicleSpawner(PlayerModel playerClass)
         {
-            foreach (VehicleModel vehClasses in Globals.Constants.VehicleSpawn)
+            foreach (VehicleModel vehClasses in Constants.VehicleSpawn)
             {
                 if (playerClass.Position.Distance(vehClasses.SpawnPosition) <= 10)
                 {
@@ -28,7 +28,7 @@ namespace Gangwars.EventKey
                 if (GetNearestVehicleSpawner(playerClass) != null)
                 {
                     playerClass.Emit("CarWindow:Show", playerClass._Level);
-                    Core.Debug.OutputDebugString("CarWindow:Show : " + playerClass.Name);
+                    Debug.OutputDebugString("CarWindow:Show : " + playerClass.Name);
                 }
             }
             catch { }

@@ -7,15 +7,15 @@
 import alt from 'alt-client';
 import * as game from "natives";
 
-import * as LibIndex from "/Client/Lib/index";
-import * as LibEvents from "/Client/Lib/events";
+import * as LibIndex from "./Lib/index";
+import * as LibEvents from "./Lib/events";
 
-import * as RegisterLogin from "/Client/RegisterLogin/index";
-import * as UI from "/Client/UI/index";
-import * as scoreboard from "/Client/scoreboard/index";
-import * as carspawner from "/Client/Car/index";
-import * as Nametags from "/Client/Nametags/index";
-import * as Notification from "/Client/Notification/index";
+import * as RegisterLogin from "./RegisterLogin/index";
+import * as UI from "./UI/index";
+import * as scoreboard from "./scoreboard/index";
+import * as carspawner from "./Car/index";
+import * as Nametags from "./Nametags/index";
+import * as Notification from "./Notification/index";
 let localplayer = alt.Player.local;
 
 alt.setStat('stamina', 100);

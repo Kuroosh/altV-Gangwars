@@ -1,5 +1,6 @@
 ﻿using AltV.Net;
 using AltV.Net.Elements.Entities;
+using Gangwars.Core;
 using System;
 using System.Numerics;
 
@@ -24,7 +25,7 @@ namespace Gangwars.Model
             set { Alt.Emit("GlobalSystems:PlayerPosition", this, value); }
         }
 
-        public PlayerModel(IServer server, IntPtr nativePointer, ushort id) : base(server, nativePointer, id)
+        public PlayerModel(ICore server, IntPtr nativePointer, ushort id) : base(server, nativePointer, id)
         {
             try
             {
@@ -40,18 +41,20 @@ namespace Gangwars.Model
                 _LoggedIn = false;
                 position = new Vector3(0, 0, 0);
             }
-            catch (Exception ex) { Core.Debug.CatchExceptions("PlayerModel-Create", ex); }
+            catch (Exception ex) { 
+                Debug.CatchExceptions("PlayerModel-Create", ex);
+            }
         }
     }
     public class MyPlayerFactory : IEntityFactory<IPlayer>
     {
-        public IPlayer Create(IServer server, IntPtr entityPointer, ushort id)
+        public IPlayer Create(ICore server, IntPtr entityPointer, ushort id)
         {
             try
             {
                 return new PlayerModel(server, entityPointer, id);
             }
-            catch (Exception ex) { Core.Debug.CatchExceptions("PlayerFactory:Create", ex); return null; }
+            catch (Exception ex) { Debug.CatchExceptions("PlayerFactory:Create", ex); return null; }
         }
     }
 }

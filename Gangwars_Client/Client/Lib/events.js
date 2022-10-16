@@ -56,10 +56,10 @@ alt.onServer("BlipClass:CreateBlip", (BlipJson) => {
     catch{ }
 });
 
-alt.onServer("Clothes:Load", (clothesslot, clothesdrawable, clothestexture) => {
+alt.onServer("Clothes:Load", (clothesslot, clothesdrawable, clothestexture, clothespalette) => {
     try {
         if (clothesdrawable < 0 || clothestexture < 0) { return; }
-        game.setPedComponentVariation(LocalPlayer.scriptID, clothesslot, clothesdrawable, clothestexture);
+        game.setPedComponentVariation(LocalPlayer.scriptID, clothesslot, clothesdrawable, clothestexture, clothespalette);
     }
     catch{ }
 });

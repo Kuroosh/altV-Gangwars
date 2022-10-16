@@ -12,7 +12,7 @@ let Scoreboard
 
 export function CreateScoreboard() {
     if (Scoreboard) { return; }
-    Scoreboard = new alt.WebView("http://resource/Client/scoreboard/main.html");
+    Scoreboard = new alt.WebView("http://resource/Client/scoreboard/main.html", false);
 }
 
 alt.on('keyup', (key) => {

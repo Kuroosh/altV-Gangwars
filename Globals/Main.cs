@@ -30,11 +30,12 @@ namespace Gangwars.Globals
                     if (playerClass._LoggedIn)
                     {
                         CurrentIngameTime = DateTime.Now.AddHours(1);
-                        playerClass.SetDateTime(DateTime.Now.Day, DateTime.Now.Day, DateTime.Now.Day, CurrentIngameTime.Hour, CurrentIngameTime.Minute, CurrentIngameTime.Second);
+                        playerClass.SetDateTime(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, CurrentIngameTime.Hour, CurrentIngameTime.Minute, CurrentIngameTime.Second);
+
                         //playerClass.SetWeather((uint)CurrentWeather);
                         playerClass._Playtime += 1;
                         Database.Main.SaveCharacterInformation(playerClass);
-                        Core.Debug.OutputLog("Character Information for [" + playerClass.GetVnXName() + "] saved...", ConsoleColor.Green);
+                        Debug.OutputLog("Character Information for [" + playerClass.GetVnXName() + "] saved...", ConsoleColor.Green);
                     }
                 }
             }

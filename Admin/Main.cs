@@ -40,7 +40,7 @@ namespace Gangwars.Admin
                 PlayerModel targetClass = Globals.Main.FindPlayerByName(target);
                 if (targetClass == null) { return; }
                 targetClass.Kick(reason);
-                Database.Main.AddPlayerBan(admin, targetClass, DateTime.Now.AddHours(Banhours), reason, Globals.Constants.BANTYPE_TIMEBAN);
+                Database.Main.AddPlayerBan(admin, targetClass, DateTime.Now.AddHours(Banhours), reason, Constants.BANTYPE_TIMEBAN);
             }
             catch (Exception ex) { Core.Debug.CatchExceptions("TimeBanPlayer", ex); }
         }
@@ -54,7 +54,7 @@ namespace Gangwars.Admin
                 PlayerModel targetClass = Globals.Main.FindPlayerByName(target);
                 if (targetClass == null) { return; }
                 targetClass.Kick(reason);
-                Database.Main.AddPlayerBan(admin, targetClass, DateTime.Now, reason, Globals.Constants.BANTYPE_PERMABAN);
+                Database.Main.AddPlayerBan(admin, targetClass, DateTime.Now, reason, Constants.BANTYPE_PERMABAN);
             }
             catch (Exception ex) { Core.Debug.CatchExceptions("PermaBanPlayer", ex); }
         }
