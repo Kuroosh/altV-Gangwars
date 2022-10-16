@@ -8,7 +8,7 @@ import * as alt from 'alt-client';
 import * as game from "natives";
 import { ShowCursor } from '../Lib';
 
-let UI = new alt.WebView("http://resource/Client/UI/main.html");
+let UI = new alt.WebView("http://resource/Client/UI/main.html", false);
 
 alt.onServer('TeamSelection:Show', () => {
     UI.focus();

@@ -52,7 +52,7 @@ export function DrawText(msg, screenPos, scale, fontType, ColorRGB, useOutline =
 
         if (useDropShadow) game.setTextDropShadow();
 
-        game.endTextCommandDisplayText(screenPos[0], screenPos[1]);
+        game.endTextCommandDisplayText(screenPos[0], screenPos[1], 0);
     }
     catch{ }
 }
@@ -92,7 +92,7 @@ export function Draw3DText(msg, x, y, z, fontType, color, range = 20, useOutline
             game.addTextComponentSubstringPlayerName(msg);
             if (useOutline) game.setTextOutline();
             if (useDropShadow) game.setTextDropShadow();
-            game.endTextCommandDisplayText(_x, _y);
+            game.endTextCommandDisplayText(_x, _y, 0);
         }
     }
     catch{ }

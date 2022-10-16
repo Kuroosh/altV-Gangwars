@@ -8,9 +8,12 @@ namespace Gangwars.Globals
 {
     public class Events : IScript
     {
+        [ScriptEvent(ScriptEventType.PlayerConnect)]
         [ServerEvent("GlobalSystems:PlayerReady")]
-        public void OnPlayerConnect(PlayerModel playerClass)
+
+        public void OnPlayerConnect(PlayerModel playerClass, string reason)
         {
+            Alt.Log("Call : OnPlayerConnect");
             playerClass.OnPlayerConnect();
             RegisterLogin.Main.LoadGangAreas(playerClass);
             RegisterLogin.Main.LoadGangVehicleSpawnpoints(playerClass);
@@ -23,7 +26,7 @@ namespace Gangwars.Globals
             {
                 source?.Emit("Globals:ShowBloodScreen");
             }
-            catch (Exception ex) { Core.Debug.CatchExceptions("PlayerDamage", ex); }
+            catch (Exception ex) { Debug.CatchExceptions("PlayerDamage", ex); }
         }
         [ScriptEvent(ScriptEventType.PlayerDisconnect)]
         public void OnPlayerDisconnect(PlayerModel client, string reason)
@@ -33,7 +36,7 @@ namespace Gangwars.Globals
                 Database.Main.SaveCharacterInformation(client);
                 client?.RemoveAllPlayerWeapons();
             }
-            catch (Exception ex) { Core.Debug.CatchExceptions("OnPlayerDisconnect", ex); }
+            catch (Exception ex) { Debug.CatchExceptions("OnPlayerDisconnect", ex); }
         }
 
         /*
@@ -115,8 +118,9 @@ namespace Gangwars.Globals
     {
         public static void OnPlayerConnect(this PlayerModel playerClass)
         {
+            Alt.Log("Incoming Connection - " + playerClass.Name);
             try { RegisterLogin.Main.ShowRegisterLogin(playerClass); }
-            catch (Exception ex) { Core.Debug.CatchExceptions("OnPlayerConnect", ex); }
+            catch (Exception ex) { Debug.CatchExceptions("OnPlayerConnect", ex); }
         }
     }
 }

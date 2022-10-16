@@ -5,14 +5,14 @@
 ////////www.venox-reallife.com////////
 //----------------------------------//
 import * as alt from 'alt-client';
-import * as game from "natives";
 import { ShowCursor } from '../Lib';
 import { CreateScoreboard } from '../scoreboard';
 
 let LoginRegisterBrowser;
 
 alt.onServer('LoginRegister:Create', () => {
-    LoginRegisterBrowser = new alt.WebView("http://resource/Client/RegisterLogin/main.html");
+    alt.log('Call Clientside Login function!!!')
+    LoginRegisterBrowser = new alt.WebView("http://resource/Client/RegisterLogin/main.html", false);
     LoginRegisterBrowser.focus();
     ShowCursor(true);
     LoginRegisterBrowser.on('Window:LoginClicked', (name, password) => {

@@ -7,7 +7,7 @@
 import * as alt from 'alt-client';
 import * as game from "natives";
 
-let browser_1 = new alt.WebView("http://resource/Client/Notification/notify.html");
+let browser_1 = new alt.WebView("http://resource/Client/Notification/notify.html", false);
 
 alt.onServer('createVnXLiteNotify', (e, v) => {
     browser_1.emit("Notify:Create", e, v);

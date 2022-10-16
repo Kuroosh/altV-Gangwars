@@ -35,7 +35,7 @@ alt.everyTick(() => {
 
 
 
-let CarWindow = new alt.WebView("http://resource/Client/Car/main.html");
+let CarWindow = new alt.WebView("http://resource/Client/Car/main.html", false);
 
 alt.onServer('CarWindow:Show', (level) => {
     CarWindow.focus();
